@@ -207,9 +207,9 @@ echo -e "
 \e[34;1m         \/       \/          \/            \/     \/\/  \e[0m
 \e[31;1m        VPS AUTOSCRIPT BY DAVID ARMSTRONG                \e[0m";
 PS3='
-Please Enter Your Choice From 1 → 10 : '
+Please Enter Your Choice From 1 → 11 : '
 options=(
-"Add User" "Renew User" "Delete User" "Users List" "Expired Users" "Users Not Expired" "Speedtest" "VPS RAM usage" "Change Password" "Quit")
+"Ports List" "Add User" "Renew User" "Delete User" "Users List" "Expired Users" "Users Not Expired" "Speedtest" "VPS RAM usage" "Change Password" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -221,6 +221,19 @@ do
             renew_user
             break
             ;;
+        "Ports List")
+            clear
+            echo -e "
+            \e[34;1m .......................     \e[0m
+            \e[34;1m  OpenSSH Port : 22  \e[0m
+            \e[34;1m  Dropbear Port: 442 555  \e[0m
+            \e[34;1m  Stunnel Port : 443 445  \e[0m
+            \e[34;1m  Squid Port : 3128 8000 8080  \e[0m
+            \e[34;1m  Badvpn Port : 7300  \e[0m
+            \e[34;1m .......................     \e[0m
+            \e[31;1m        VPS AUTOSCRIPT BY DAVID ARMSTRONG                \e[0m";
+            break
+             ;;
         "Delete User")
             delete_user
             break
