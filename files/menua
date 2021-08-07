@@ -144,7 +144,6 @@ echo -e "\e[36m----------------------------------------------\e[0m"
 
 function expired_users(){
 clear
-echo -e "\e[32m※\e[0m \e[34mPOWER BY HoraPusaVPN SERVER\e[0m \e[32m※\e[0m"
 echo -e "\e[36m---------------------------------\e[0m"
 echo "BIL  USERNAME          EXPIRED "
 echo -e "\e[36m---------------------------------\e[0m"
@@ -173,7 +172,6 @@ rm -r /tmp/*.txt
 
 function not_expired_users(){
 clear
-echo -e "\e[33m※\e[0m \e[34mPOWER BY HoraPusaVPN SERVER\e[0m \e[33m※\e[0m"
 echo -e "\e[36m---------------------------------\e[0m"
 echo "BIL  USERNAME          EXPIRED "
 echo -e "\e[36m---------------------------------\e[0m"
@@ -214,7 +212,8 @@ echo -e "
 PS3='
 Please Enter Your Choice From 1 → 10 : '
 options=(
-"Add User" "Renew User" "Delete User" "User List" "Expired Users" "Users Not Expired" "Speedtest" "VPS RAM usage" "Change Password" "Quit")
+"Add User" "Renew User" "Delete User" "Users List" "Expired Users" "Users Not Expired" "Speedtest" "VPS RAM usage" "Change Password" "Quit")
+clear
 select opt in "${options[@]}"
 do
     case $opt in
