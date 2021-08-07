@@ -117,15 +117,6 @@ sudo apt-get update
 curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
 sudo apt-get install speedtest
 
-# restart service
-badvpn start
-service stunnel4 restart
-service ssh restart
-service dropbear restart
-service squid restart
 
-
-
-
-read -n1 -r -p "          Press Any Key To Reboot         "
+read -n1 -r -p " \e[92m     Setting up the VPS is complete! Press Any Key To Reboot....        "
 reboot
