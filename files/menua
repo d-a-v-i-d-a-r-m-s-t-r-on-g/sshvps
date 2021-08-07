@@ -211,9 +211,9 @@ echo -e "
 \e[31;1m        VPS AUTOSCRIPT BY DAVID ARMSTRONG                \e[0m";
 PS3='
 Please Enter Your Choice From 1 → 10 : '
+clear
 options=(
 "Add User" "Renew User" "Delete User" "Users List" "Expired Users" "Users Not Expired" "Speedtest" "VPS RAM usage" "Change Password" "Quit")
-clear
 select opt in "${options[@]}"
 do
     case $opt in
