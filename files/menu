@@ -214,7 +214,7 @@ echo -e "\e[36m※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ �
 PS3='
 Please Enter Your Choice From 1 → 20 : '
 options=(
-"Add User" "Renew User" "Delete User" "User List" "User Lock" "User Unlock" "Monitor SSH/Dropbear" "Expired Users" "Users Not Expired" "Speedtest Server" "Delete & List All Expired Users" "Quit")
+"Add User" "Renew User" "Delete User" "User List" "Monitor SSH/Dropbear" "Expired Users" "Users Not Expired" "Speedtest Server" "RAM VPS Status" "Change Password" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -251,23 +251,11 @@ do
                 "Expired Users")
                         expired_users
                         break
-                        ;;
-                "Used Data By Users")
-                        used_data
-                        break
-                        ;;             
+                        ;;          
                  "Speedtest Server")
                    speedtest
                      break
-                      ;;
-                 "User Lock")
-                  user-lock
-                   break
-                     ;;
-                  "User Unlock")
-                    user-unlock
-                      break
-                       ;;              
+                      ;;       
                 "Change Password")
                         passwd
                         break
