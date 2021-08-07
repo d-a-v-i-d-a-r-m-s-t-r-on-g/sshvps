@@ -204,17 +204,17 @@ rm -r /tmp/*.txt
 clear
 echo " ";
 echo -e "
-#   __      __       .__                             ._.
-#  /  \    /  \ ____ |  |   ____  ____   _____   ____| |
-#  \   \/\/   // __ \|  | _/ ___\/  _ \ /     \_/ __ \ |
-#   \        /\  ___/|  |_\  \__(  <_> )  Y Y  \  ___/\|
-#    \__/\  /  \___  >____/\___  >____/|__|_|  /\___  >_
-#         \/       \/          \/            \/     \/\/
+\e[34;1m   __      __       .__                             ._.  \e[0m
+\e[34;1m  /  \    /  \ ____ |  |   ____  ____   _____   ____| |  \e[0m
+\e[34;1m  \   \/\/   // __ \|  | _/ ___\/  _ \ /     \_/ __ \ |  \e[0m
+\e[34;1m   \        /\  ___/|  |_\  \__(  <_> )  Y Y  \  ___/\|  \e[0m
+\e[34;1m    \__/\  /  \___  >____/\___  >____/|__|_|  /\___ >_  \e[0m
+\e[34;1m         \/       \/          \/            \/     \/\/  \e[0m
 ";
 PS3='
 Please Enter Your Choice From 1 → 20 : '
 options=(
-"Add User" "Renew User" "Delete User" "User List" "Monitor SSH/Dropbear" "Expired Users" "Users Not Expired" "Speedtest Server" "RAM VPS Status" "Change Password" "Quit")
+"Add User" "Renew User" "Delete User" "User List" "Expired Users" "Users Not Expired" "Speedtest" "VPS RAM usage" "Change Password" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -230,16 +230,11 @@ do
             delete_user
             break
              ;;
-			 
-        "Monitor SSH/Dropbear")
-            mon_ssh
-            break
-            ;;
-        "User List")
+        "Users List")
             user_list
             break
             ;;
-        "RAM VPS Status")
+        "VPS RAM usage")
                     free -h | grep -v + > /tmp/ramcache
             cat /tmp/ramcache | grep -v "Swap"
             break
@@ -252,7 +247,7 @@ do
                         expired_users
                         break
                         ;;          
-                 "Speedtest Server")
+                 "Speedtest")
                    speedtest
                      break
                       ;;       
